@@ -1,13 +1,23 @@
 :root
 {
-  --darkgrey : #333a44;
-  --apricot : #f7882f;
-  --citrus : #f7c331;
+  --darkgrey : #1a3947;/* #333a44*/
+  --grey : #566575;
+  --lightgrey : #797983;
+  --apricot : #f5751d;
+  --citrus : #fca26e;
   --applecore : #ffffff;
   --white : #ffffff;
 }
 body{
   background-color:var(--applecore);
+  font-family: 'Montserrat', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.card
+{
+  border-radius: 0;
 }
 .icon-nav
 {
@@ -27,13 +37,28 @@ body{
     background-color: var(--apricot);
     color:var(--white);
 }
+#map
+{
+    height:40vh;
+    width:100%;
+}
 .title-text
 {
     border-bottom: min(0.5vh, 0.5vw) solid var(--apricot);
     text-decoration: none;
     font-size: xx-large;
     font-weight: 400;
-    color: var(--var(--apricot));
+    color: var(--darkgrey);
+}
+.dropdown-menu > li > a:hover {
+  background-image: none;
+  background-color: var(--apricot);
+  color : white;
+}
+.dropdown-menu > li > a:focus {
+  background-image: none;
+  background-color: var(--citrus);
+  color : white;
 }
 /* Scrollbars */
 /* Works on Firefox */
@@ -55,4 +80,70 @@ body{
     background-color: var(--citrus);
     border-radius: 20px;
     border: 3px solid var(--white);
+  }
+
+  footer ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    padding: 10px;
+    font-weight: 300;
+    transition: 0.2s ease;
+  }
+
+  .col-md-7 h5, .col-md-5 h5{
+    border-bottom: 2px solid var(--citrus);
+    padding: 4px;
+  }
+
+  footer ul li a:hover {
+    padding-left: 25px;
+  }
+
+  /* for mobile phone */
+  @media(max-width: 500px) {
+
+    .col, .col-md-7 h5{
+      display: block;
+      width: 200%;
+      margin-bottom: 20px;
+    }
+
+    .col ul li a {
+      width: 200%;
+    }
+
+    .col img, small {
+      width: 200%;
+    }
+
+    .col-md-5 {
+      width: 100%;
+    }
+  }
+
+  /* for tabs and ipads */
+  @media(max-width: 900px) {
+    .col-md-7 {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: var(--grey);
+    color:var(--citrus);
+    margin: 0px 8px 8px 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .social-links a:hover {
+    color: var(--apricot);
+    background-color: #ffffff;
   }
